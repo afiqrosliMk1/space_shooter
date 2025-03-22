@@ -13,6 +13,10 @@ class Ship:
         self.move_xdir = game.move_xdir
         self.move_ydir = game.move_ydir
         self.settings = game.game_settings
+        self.center_ship()
+
+    def center_ship(self):
+        """center the ship position"""
         self.rect.midbottom = self.screen_rect.midbottom
         #use float to store exact position
         self.x = float(self.rect.x)
